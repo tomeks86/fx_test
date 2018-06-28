@@ -1,5 +1,7 @@
 package edu.tseidler;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,12 +24,26 @@ public class Controller {
     Button multiplyButton;
     @FXML
     Label result;
+    @FXML
+    Label myStupidTest;
+
+    public void initialize() {
+//        myStupidTest.textProperty().bind(multiplyButton.accessibleTextProperty());
+        myStupidTest.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+
+            }
+        });
+    }
 
     public void showText() {
         i++;
         textArea.setText("hello: " + i);
         if (!myLabel.isVisible())
             myLabel.setVisible(true);
+        else
+            myLabel.setVisible(false);
     }
 
     public void multiply(MouseEvent mouseEvent) {

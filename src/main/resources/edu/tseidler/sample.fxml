@@ -11,15 +11,16 @@
         <Insets topRightBottomLeft="15"/>
     </padding>
     <Label text="Click on the button!" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
-    <Button text="Some button" GridPane.rowIndex="1" GridPane.columnIndex="0" onMouseClicked="#showText"/>
+    <Button text="Some button" GridPane.rowIndex="1" GridPane.columnIndex="0" onMouseClicked="#showText" onKeyPressed="#showText"/>
     <TextArea fx:id="textArea" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="4" prefRowCount="2"/>
     <Label fx:id="myLabel" text="clicked!" GridPane.rowIndex="3" visible="false"/>
     <Label text="first argument" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-    <TextField fx:id="firstArgument" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <TextField fx:id="firstArgument" GridPane.rowIndex="4" GridPane.columnIndex="1" maxWidth="60"/>
     <Label text="second argument" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-    <TextField fx:id="secondArgument" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    <TextField fx:id="secondArgument" GridPane.rowIndex="5" GridPane.columnIndex="1" maxWidth="60"/>
     <Button fx:id="multiplyButton" text="X" GridPane.rowIndex="5" GridPane.columnIndex="2" onMouseClicked="#multiply"/>
-    <Label text="result" GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+    <Label text="result" GridPane.rowIndex="5" GridPane.columnIndex="3" GridPane.columnSpan="3" minWidth="150"/>
     <Label fx:id="result" GridPane.rowIndex="6" GridPane.columnIndex="3"/>
+    <Label text="aaa" fx:id="myStupidTest" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
 
 </GridPane>
